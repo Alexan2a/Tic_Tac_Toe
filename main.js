@@ -4,12 +4,12 @@ const fig = [
   "assets/img/triang.png",
   "assets/img/square.png",
 ];
-const handImg = {
-  1: "assets/img/cross_hand.png",
-  2: "assets/img/round_hand.png",
-  3: "assets/img/triang_hand.png",
-  4: "assets/img/square_hand.png",
-};
+const handImg = [
+  "assets/img/cross_hand.png",
+  "assets/img/round_hand.png",
+  "assets/img/triang_hand.png",
+  "assets/img/square_hand.png",
+];
 
 let size;
 let playersAmount = 2;
@@ -121,7 +121,7 @@ function createGameField() {
       element2.addEventListener("click", setCell);
     });
   });
-  for (let i = 1; i <= playersAmount; i++) {
+  for (let i = 0; i < playersAmount; i++) {
     hands.insertAdjacentHTML(
       "beforeend",
       `<div class="hand" id="hand${i}">
