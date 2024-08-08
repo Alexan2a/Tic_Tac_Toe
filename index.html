@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="tic-tac-toe">
+      <div class="start" id="start">
+        <div class="field-size">
+          Размер поля:<input
+            type="number"
+            value="3"
+            class="field-size-input"
+            id="fieldSize"
+            min="3"
+          />
+        </div>
+        <div class="player-container" id="players">
+          <div value="2" class="player-btn active-btn" id="players2">
+            <img src="assets/img/2players.png" class="player-img" />
+            <p class="player-text">2 игрока</p>
+          </div>
+          <div value="3" class="player-btn" id="players3">
+            <img src="assets/img/3players.png" class="player-img" />
+            <p class="player-text">3 игрока</p>
+          </div>
+          <div value="4" class="player-btn" id="players4">
+            <img src="assets/img/4players.png" class="player-img" />
+            <p class="player-text">4 игрока</p>
+          </div>
+        </div>
+
+        <div class="start-btn" id="startButton">Начать игру!</div>
+      </div>
+      <div class="result-dialog" id="res">
+        <p class="result" id="result"></p>
+        <div class="btn-group">
+          <button class="btn" id="tryAgainButton">играть снова</button>
+          <button class="btn" id="newGameButton">в меню</button>
+        </div>
+      </div>
+      <div class="game" id="game">
+        <div class="step" id="stepText"></div>
+        <div class="game-field" id="gameField"></div>
+        <div class="hands" id="hands"></div>
+      </div>
+    </div>
+    <script src="./main.js"></script>
+  </body>
+</html>

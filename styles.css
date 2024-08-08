@@ -1,0 +1,240 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "MultiroundPro";
+  src: url(assets/fonts/MultiroundPro.woff2) format("woff2");
+}
+/*bg: #3d7389;
+  input: #477e94;
+  btn-border: 4px solid #59a1be;
+  btn: #63b8da;*/
+
+body {
+  height: 100vh;
+  background-color: #839e60;
+  background-repeat: no-repeat;
+}
+.tic-tac-toe {
+  display: grid;
+  height: 100vh;
+  background-repeat: no-repeat;
+}
+
+.start {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 32px;
+  font-family: "MultiroundPro";
+  color: #ffffff;
+}
+
+.field-size {
+  display: flex;
+  width: fit-content;
+  font-size: 24px;
+  justify-content: center;
+}
+.field-size-input {
+  width: 20%;
+  margin-left: 8px;
+  font-family: "MultiroundPro";
+  font-size: 24px;
+  text-align: center;
+  color: #ffffff;
+  background-color: #74885a;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+}
+
+.player-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 32px 0 32px 0;
+  height: 60%;
+  width: 80%;
+}
+
+.player-btn {
+  display: grid;
+  width: 25%;
+  padding: 8px;
+  border-radius: 8px;
+  border: 4px solid #a5c877;
+  background-color: #8ba765;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.player-btn:hover {
+  background-color: #97b66d;
+}
+
+.active-btn {
+  border: 4px solid #ffffff;
+}
+
+.player-img {
+  align-self: center;
+  justify-self: center;
+  width: 100%;
+}
+
+.player-text {
+  font-family: "MultiroundPro";
+  font-size: 24px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.start-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 4%;
+  width: 25%;
+  height: 10%;
+  font-size: 24px;
+  border-radius: 16px;
+  background-color: #a5c877;
+  transition: all 0.2s;
+}
+
+.start-btn:hover {
+  color: #a5c877;
+  background-color: #ffffff;
+}
+
+.game {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 80vh;
+}
+.game-field {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 16px;
+  width: 60vh;
+  height: 60vh;
+}
+.step {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 24px;
+  padding: 8px;
+  width: 20%;
+  height: 10%;
+  font-family: "MultiroundPro";
+  font-size: 24px;
+  color: #ffffff;
+  border-radius: 8px;
+  background-color: #a5c877;
+}
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+  height: 100%;
+}
+.cell {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  border-right: 4px solid #ffffff;
+  border-bottom: 4px solid #ffffff;
+  cursor: pointer;
+}
+
+.corner {
+  border: none;
+}
+.border-bottom {
+  border-bottom: none;
+}
+.border-right {
+  border-right: none;
+}
+.sign {
+  width: 100%;
+  padding: 8px;
+}
+
+.hands {
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  bottom: 0;
+  height: 25vh;
+  width: 70%;
+  margin-bottom: -8vh;
+  margin-top: 8vh;
+}
+.hand {
+  transition: all 1s;
+}
+.active {
+  margin-bottom: 8vh;
+  margin-top: -8vh;
+}
+.hand-img {
+  height: 100%;
+}
+
+.result-dialog {
+  display: grid;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  justify-self: center;
+  align-self: center;
+  position: fixed;
+  z-index: 1;
+  padding: 32px;
+  height: 30vh;
+  width: 70%;
+  font-family: "MultiroundPro";
+  font-size: 24px;
+  color: #ffffff;
+  border: 3px solid #ffffff;
+  border-radius: 16px;
+  background-color: #8ba765;
+}
+
+.result {
+  justify-self: center;
+}
+
+.btn-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.btn {
+  width: 40%;
+  padding: 8px;
+  font-family: "MultiroundPro";
+  font-size: 24px;
+  color: #ffffff;
+  background-color: #a5c877;
+  border-radius: 16px;
+  border: none;
+  transition: all 0.2s;
+}
+
+.btn:hover {
+  color: #a5c877;
+  background-color: #ffffff;
+}
